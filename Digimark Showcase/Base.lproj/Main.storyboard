@@ -1,25 +1,191 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="NotoSans-Bold.ttf">
+            <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+        </mutableArray>
+        <mutableArray key="NotoSans-Regular.ttf">
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Digimark_Showcase" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="MaterialView" customModule="Digimark_Showcase" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bFd-ea-Xvb">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In / Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30u-q2-O3H">
+                                        <rect key="frame" x="20" y="37" width="152" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Sw0-s9-2GM"/>
+                                            <constraint firstAttribute="width" constant="152" id="Zoa-HB-PJf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
+                                        <color key="textColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digimark-icon-logo" translatesAutoresizingMaskIntoConstraints="NO" id="XwL-RN-cC2">
+                                        <rect key="frame" x="538" y="22" width="54" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="j1u-MV-kVo"/>
+                                            <constraint firstAttribute="width" constant="54" id="qcx-vi-i8V"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="30u-q2-O3H" firstAttribute="top" secondItem="bFd-ea-Xvb" secondAttribute="top" constant="37" id="BGf-tq-fsA"/>
+                                    <constraint firstItem="XwL-RN-cC2" firstAttribute="top" secondItem="bFd-ea-Xvb" secondAttribute="top" constant="22" id="IB3-mo-J7T"/>
+                                    <constraint firstAttribute="trailing" secondItem="XwL-RN-cC2" secondAttribute="trailing" constant="8" id="Vbp-TL-xHI"/>
+                                    <constraint firstAttribute="height" constant="128" id="Xza-AG-Xim"/>
+                                    <constraint firstItem="30u-q2-O3H" firstAttribute="leading" secondItem="bFd-ea-Xvb" secondAttribute="leading" constant="20" id="sW5-Ul-X6Q"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uT2-ID-fLP" customClass="MaterialView" customModule="Digimark_Showcase" customModuleProvider="target">
+                                <rect key="frame" x="20" y="76" width="560" height="128"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="UPf-Ip-5D1">
+                                        <rect key="frame" x="20" y="10" width="520" height="108"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fb-icon-new" translatesAutoresizingMaskIntoConstraints="NO" id="wzE-KN-ejo">
+                                                <rect key="frame" x="0.0" y="22" width="65" height="65"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HgS-V2-FYK" customClass="MaterialButton" customModule="Digimark_Showcase" customModuleProvider="target">
+                                                <rect key="frame" x="105" y="38" width="415" height="33"/>
+                                                <color key="backgroundColor" red="0.27450980392156865" green="0.38039215686274508" blue="0.58431372549019611" alpha="1" colorSpace="deviceRGB"/>
+                                                <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
+                                                <state key="normal" title="FACEBOOK LOGIN">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="G23-mg-jIQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="UPf-Ip-5D1" secondAttribute="trailing" constant="20" id="JpH-qO-4K9"/>
+                                    <constraint firstItem="UPf-Ip-5D1" firstAttribute="leading" secondItem="uT2-ID-fLP" secondAttribute="leading" constant="20" id="Nsi-c0-GDq"/>
+                                    <constraint firstItem="UPf-Ip-5D1" firstAttribute="top" secondItem="uT2-ID-fLP" secondAttribute="top" constant="10" id="bNO-cR-9v7"/>
+                                    <constraint firstAttribute="bottom" secondItem="UPf-Ip-5D1" secondAttribute="bottom" constant="10" id="se3-eT-QkP"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wsb-hP-T6P" customClass="MaterialView" customModule="Digimark_Showcase" customModuleProvider="target">
+                                <rect key="frame" x="20" y="224" width="560" height="356"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Login / Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvg-zI-EoJ">
+                                        <rect key="frame" x="8" y="20" width="179" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="152" id="7lC-od-qkb"/>
+                                            <constraint firstAttribute="height" constant="24" id="Z6c-UF-9ET"/>
+                                            <constraint firstAttribute="height" constant="21" id="fJX-hH-ejo"/>
+                                            <constraint firstAttribute="width" constant="179" id="hxp-gw-GX0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="7lC-od-qkb"/>
+                                                <exclude reference="fJX-hH-ejo"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EhW-4g-fWx" customClass="MaterialTextField" customModule="Digimark_Showcase" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="64" width="544" height="35"/>
+                                        <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="deviceRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="C2X-AJ-LiA"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2MI-Ct-VfF" customClass="MaterialTextField" customModule="Digimark_Showcase" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="119" width="544" height="35"/>
+                                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="7Ec-2w-L2B"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SuI-by-Sgf" customClass="MaterialButton" customModule="Digimark_Showcase" customModuleProvider="target">
+                                        <rect key="frame" x="181" y="204" width="199" height="33"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="199" id="b6S-82-dMW"/>
+                                            <constraint firstAttribute="height" constant="33" id="bsb-IB-uua"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
+                                        <state key="normal" title="Login / Sign Up">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="765-s3-Mf2"/>
+                                    <constraint firstItem="EhW-4g-fWx" firstAttribute="leading" secondItem="zvg-zI-EoJ" secondAttribute="leading" id="GsU-eV-x9D"/>
+                                    <constraint firstItem="EhW-4g-fWx" firstAttribute="top" secondItem="zvg-zI-EoJ" secondAttribute="bottom" constant="20" id="JUm-aG-H4p"/>
+                                    <constraint firstItem="2MI-Ct-VfF" firstAttribute="leading" secondItem="EhW-4g-fWx" secondAttribute="leading" id="KrJ-uX-alB"/>
+                                    <constraint firstItem="2MI-Ct-VfF" firstAttribute="top" secondItem="EhW-4g-fWx" secondAttribute="bottom" constant="20" id="L9i-2h-DGC"/>
+                                    <constraint firstItem="zvg-zI-EoJ" firstAttribute="leading" secondItem="Wsb-hP-T6P" secondAttribute="leading" constant="8" id="Mtb-U0-I7R"/>
+                                    <constraint firstItem="SuI-by-Sgf" firstAttribute="centerX" secondItem="Wsb-hP-T6P" secondAttribute="centerX" id="X8X-P6-XXc"/>
+                                    <constraint firstItem="SuI-by-Sgf" firstAttribute="top" secondItem="2MI-Ct-VfF" secondAttribute="bottom" constant="50" id="deE-Ya-jn6"/>
+                                    <constraint firstAttribute="trailing" secondItem="EhW-4g-fWx" secondAttribute="trailing" constant="8" id="jD9-AP-hZa"/>
+                                    <constraint firstItem="zvg-zI-EoJ" firstAttribute="top" secondItem="Wsb-hP-T6P" secondAttribute="top" constant="20" id="tEj-yH-u57"/>
+                                    <constraint firstItem="2MI-Ct-VfF" firstAttribute="trailing" secondItem="EhW-4g-fWx" secondAttribute="trailing" id="uYX-Jn-Vuq"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="765-s3-Mf2"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="uT2-ID-fLP" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="105-uz-lhc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Wsb-hP-T6P" secondAttribute="bottom" constant="20" id="2Vn-TT-wxA"/>
+                            <constraint firstItem="Wsb-hP-T6P" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4Va-Tg-vvn"/>
+                            <constraint firstAttribute="trailing" secondItem="bFd-ea-Xvb" secondAttribute="trailing" id="7MT-hQ-Ire"/>
+                            <constraint firstItem="bFd-ea-Xvb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BdG-aD-cP3"/>
+                            <constraint firstItem="Wsb-hP-T6P" firstAttribute="top" secondItem="uT2-ID-fLP" secondAttribute="bottom" constant="20" id="D6u-KB-M3f"/>
+                            <constraint firstItem="bFd-ea-Xvb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MJD-uj-xfm"/>
+                            <constraint firstItem="Wsb-hP-T6P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="QX1-t6-eog"/>
+                            <constraint firstItem="uT2-ID-fLP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="56" id="uMI-py-XoD"/>
+                            <constraint firstItem="uT2-ID-fLP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ztN-1q-UyP"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="440" y="366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="digimark-icon-logo" width="156" height="206"/>
+        <image name="fb-icon-new" width="65" height="65"/>
+    </resources>
 </document>
