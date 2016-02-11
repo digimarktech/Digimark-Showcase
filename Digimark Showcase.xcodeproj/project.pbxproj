@@ -25,6 +25,8 @@
 		BDF017601C6CEAFA0021D475 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF0175F1C6CEAFA0021D475 /* FBSDKCoreKit.framework */; };
 		BDF017621C6CEB0E0021D475 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF017611C6CEB0E0021D475 /* FBSDKLoginKit.framework */; };
 		BDF017651C6CF5A60021D475 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF017641C6CF5A60021D475 /* DataService.swift */; };
+		BDF017671C6D28930021D475 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF017661C6D28930021D475 /* FeedVC.swift */; };
+		BDF017691C6D29A10021D475 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF017681C6D29A10021D475 /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		BDF0175F1C6CEAFA0021D475 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		BDF017611C6CEB0E0021D475 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		BDF017641C6CF5A60021D475 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		BDF017661C6D28930021D475 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		BDF017681C6D29A10021D475 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		FD308DCFB1B0F1E03A6EF98D /* Pods-Digimark Showcase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digimark Showcase.release.xcconfig"; path = "Pods/Target Support Files/Pods-Digimark Showcase/Pods-Digimark Showcase.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,7 +108,6 @@
 				BDF017421C6BC0070021D475 /* View */,
 				BDF017411C6BBFFF0021D475 /* Controller */,
 				BDF0172F1C6BBB9F0021D475 /* AppDelegate.swift */,
-				BDF017311C6BBB9F0021D475 /* ViewController.swift */,
 				BDF017331C6BBB9F0021D475 /* Main.storyboard */,
 				BDF017361C6BBB9F0021D475 /* Assets.xcassets */,
 				BDF017381C6BBB9F0021D475 /* LaunchScreen.storyboard */,
@@ -116,6 +119,8 @@
 		BDF017411C6BBFFF0021D475 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BDF017311C6BBB9F0021D475 /* ViewController.swift */,
+				BDF017661C6D28930021D475 /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 				BDF0174D1C6BC8430021D475 /* MaterialView.swift */,
 				BDF017521C6BD77C0021D475 /* MaterialButton.swift */,
 				BDF017541C6BE3940021D475 /* MaterialTextField.swift */,
+				BDF017681C6D29A10021D475 /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -313,6 +319,8 @@
 				BDF017651C6CF5A60021D475 /* DataService.swift in Sources */,
 				BDF0174E1C6BC8430021D475 /* MaterialView.swift in Sources */,
 				BDF017321C6BBB9F0021D475 /* ViewController.swift in Sources */,
+				BDF017671C6D28930021D475 /* FeedVC.swift in Sources */,
+				BDF017691C6D29A10021D475 /* PostCell.swift in Sources */,
 				BDF017301C6BBB9F0021D475 /* AppDelegate.swift in Sources */,
 				BDF017511C6BC8930021D475 /* Constants.swift in Sources */,
 				BDF017531C6BD77C0021D475 /* MaterialButton.swift in Sources */,

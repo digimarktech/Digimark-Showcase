@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         
         let facebookLogin = FBSDKLoginManager()
         
-        facebookLogin.logInWithReadPermissions(["email"]) { (facebookResult:FBSDKLoginManagerLoginResult!, facebookError:NSError!) -> Void in
+        facebookLogin.logInWithReadPermissions(["email"], fromViewController: self) { (facebookResult: FBSDKLoginManagerLoginResult!, facebookError: NSError!) -> Void in
             
             if facebookError != nil {
                 
@@ -63,6 +63,34 @@ class ViewController: UIViewController {
                 })
             }
         }
+        
+        /*facebookLogin.logInWithReadPermissions(["email"]) { (facebookResult:FBSDKLoginManagerLoginResult!, facebookError:NSError!) -> Void in
+            
+            if facebookError != nil {
+                
+                print("Facebook login failed. Error \(facebookError)")
+                
+            } else {
+                
+                let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
+                print("Succesfully logged in with facebook. \(accessToken)")
+                
+                DataService.ds.REF_BASE.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: { error, authData in
+                    
+                    if error != nil {
+                        
+                        print("Login Failed. \(error)")
+                        
+                    } else {
+                        
+                        print("Logged In! \(authData)")
+                        NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
+                        
+                        self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
+                    }
+                })
+            }
+        }*/
         
     }
     
@@ -102,6 +130,7 @@ class ViewController: UIViewController {
                     
                 } else {
                     
+                    NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
                     self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
                 }
                 
