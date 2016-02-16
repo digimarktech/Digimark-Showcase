@@ -22,11 +22,12 @@
 		BDF017531C6BD77C0021D475 /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF017521C6BD77C0021D475 /* MaterialButton.swift */; };
 		BDF017551C6BE3940021D475 /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF017541C6BE3940021D475 /* MaterialTextField.swift */; };
 		BDF0175E1C6CEAE20021D475 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF0175D1C6CEAE20021D475 /* Bolts.framework */; };
-		BDF017601C6CEAFA0021D475 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF0175F1C6CEAFA0021D475 /* FBSDKCoreKit.framework */; };
 		BDF017621C6CEB0E0021D475 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF017611C6CEB0E0021D475 /* FBSDKLoginKit.framework */; };
 		BDF017651C6CF5A60021D475 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF017641C6CF5A60021D475 /* DataService.swift */; };
 		BDF017671C6D28930021D475 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF017661C6D28930021D475 /* FeedVC.swift */; };
 		BDF017691C6D29A10021D475 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF017681C6D29A10021D475 /* PostCell.swift */; };
+		BDF0176B1C6E8D310021D475 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0176A1C6E8D310021D475 /* Post.swift */; };
+		BDF0178B1C7299B60021D475 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF0178A1C7299B60021D475 /* FBSDKCoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,11 +49,12 @@
 		BDF017521C6BD77C0021D475 /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
 		BDF017541C6BE3940021D475 /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
 		BDF0175D1C6CEAE20021D475 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		BDF0175F1C6CEAFA0021D475 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		BDF017611C6CEB0E0021D475 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		BDF017641C6CF5A60021D475 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		BDF017661C6D28930021D475 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		BDF017681C6D29A10021D475 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		BDF0176A1C6E8D310021D475 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		BDF0178A1C7299B60021D475 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		FD308DCFB1B0F1E03A6EF98D /* Pods-Digimark Showcase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digimark Showcase.release.xcconfig"; path = "Pods/Target Support Files/Pods-Digimark Showcase/Pods-Digimark Showcase.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,7 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84DC7C66752DD65AA72EC9FD /* Pods_Digimark_Showcase.framework in Frameworks */,
-				BDF017601C6CEAFA0021D475 /* FBSDKCoreKit.framework in Frameworks */,
+				BDF0178B1C7299B60021D475 /* FBSDKCoreKit.framework in Frameworks */,
 				BDF017621C6CEB0E0021D475 /* FBSDKLoginKit.framework in Frameworks */,
 				BDF0175E1C6CEAE20021D475 /* Bolts.framework in Frameworks */,
 			);
@@ -139,6 +141,7 @@
 		BDF017431C6BC00D0021D475 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BDF0176A1C6E8D310021D475 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -165,8 +168,8 @@
 		BDF017561C6CE3E10021D475 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BDF0178A1C7299B60021D475 /* FBSDKCoreKit.framework */,
 				BDF017611C6CEB0E0021D475 /* FBSDKLoginKit.framework */,
-				BDF0175F1C6CEAFA0021D475 /* FBSDKCoreKit.framework */,
 				BDF0175D1C6CEAE20021D475 /* Bolts.framework */,
 			);
 			name = Frameworks;
@@ -324,6 +327,7 @@
 				BDF017301C6BBB9F0021D475 /* AppDelegate.swift in Sources */,
 				BDF017511C6BC8930021D475 /* Constants.swift in Sources */,
 				BDF017531C6BD77C0021D475 /* MaterialButton.swift in Sources */,
+				BDF0176B1C6E8D310021D475 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +446,8 @@
 					Showcase,
 					"$(PROJECT_DIR)/Digimark",
 					Showcase,
+					"$(PROJECT_DIR)/Digimark",
+					Showcase,
 				);
 				INFOPLIST_FILE = "Digimark Showcase/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -458,6 +464,8 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Digimark",
+					Showcase,
 					"$(PROJECT_DIR)/Digimark",
 					Showcase,
 					"$(PROJECT_DIR)/Digimark",
