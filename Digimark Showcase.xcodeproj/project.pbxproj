@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		84DC7C66752DD65AA72EC9FD /* Pods_Digimark_Showcase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8623C06316A79DDDC74E38DB /* Pods_Digimark_Showcase.framework */; };
+		BD0CBCBD1C8E7A8E00BE0A38 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0CBCBC1C8E7A8E00BE0A38 /* FBSDKCoreKit.framework */; };
 		BDF017301C6BBB9F0021D475 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0172F1C6BBB9F0021D475 /* AppDelegate.swift */; };
 		BDF017321C6BBB9F0021D475 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF017311C6BBB9F0021D475 /* ViewController.swift */; };
 		BDF017351C6BBB9F0021D475 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDF017331C6BBB9F0021D475 /* Main.storyboard */; };
@@ -27,12 +28,12 @@
 		BDF017671C6D28930021D475 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF017661C6D28930021D475 /* FeedVC.swift */; };
 		BDF017691C6D29A10021D475 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF017681C6D29A10021D475 /* PostCell.swift */; };
 		BDF0176B1C6E8D310021D475 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0176A1C6E8D310021D475 /* Post.swift */; };
-		BDF0178B1C7299B60021D475 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF0178A1C7299B60021D475 /* FBSDKCoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5894BD55D18014B714AD93FE /* Pods-Digimark Showcase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digimark Showcase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Digimark Showcase/Pods-Digimark Showcase.debug.xcconfig"; sourceTree = "<group>"; };
 		8623C06316A79DDDC74E38DB /* Pods_Digimark_Showcase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digimark_Showcase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD0CBCBC1C8E7A8E00BE0A38 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		BDF0172C1C6BBB9F0021D475 /* Digimark Showcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Digimark Showcase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF0172F1C6BBB9F0021D475 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDF017311C6BBB9F0021D475 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +55,6 @@
 		BDF017661C6D28930021D475 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		BDF017681C6D29A10021D475 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		BDF0176A1C6E8D310021D475 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		BDF0178A1C7299B60021D475 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		FD308DCFB1B0F1E03A6EF98D /* Pods-Digimark Showcase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digimark Showcase.release.xcconfig"; path = "Pods/Target Support Files/Pods-Digimark Showcase/Pods-Digimark Showcase.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,7 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84DC7C66752DD65AA72EC9FD /* Pods_Digimark_Showcase.framework in Frameworks */,
-				BDF0178B1C7299B60021D475 /* FBSDKCoreKit.framework in Frameworks */,
+				BD0CBCBD1C8E7A8E00BE0A38 /* FBSDKCoreKit.framework in Frameworks */,
 				BDF017621C6CEB0E0021D475 /* FBSDKLoginKit.framework in Frameworks */,
 				BDF0175E1C6CEAE20021D475 /* Bolts.framework in Frameworks */,
 			);
@@ -168,7 +168,7 @@
 		BDF017561C6CE3E10021D475 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BDF0178A1C7299B60021D475 /* FBSDKCoreKit.framework */,
+				BD0CBCBC1C8E7A8E00BE0A38 /* FBSDKCoreKit.framework */,
 				BDF017611C6CEB0E0021D475 /* FBSDKLoginKit.framework */,
 				BDF0175D1C6CEAE20021D475 /* Bolts.framework */,
 			);
@@ -448,6 +448,10 @@
 					Showcase,
 					"$(PROJECT_DIR)/Digimark",
 					Showcase,
+					"$(PROJECT_DIR)/Digimark",
+					Showcase,
+					"$(PROJECT_DIR)/Digimark",
+					Showcase,
 				);
 				INFOPLIST_FILE = "Digimark Showcase/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -464,6 +468,10 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Digimark",
+					Showcase,
+					"$(PROJECT_DIR)/Digimark",
+					Showcase,
 					"$(PROJECT_DIR)/Digimark",
 					Showcase,
 					"$(PROJECT_DIR)/Digimark",

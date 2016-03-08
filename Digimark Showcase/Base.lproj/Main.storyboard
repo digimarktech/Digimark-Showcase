@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -13,8 +13,10 @@
             <string>NotoSans-Bold</string>
             <string>NotoSans-Bold</string>
             <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
         </mutableArray>
         <mutableArray key="NotoSans-Regular.ttf">
+            <string>NotoSans</string>
             <string>NotoSans</string>
             <string>NotoSans</string>
             <string>NotoSans</string>
@@ -210,12 +212,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="avG-eT-h4l" customClass="MaterialView" customModule="Digimark_Showcase" customModuleProvider="target">
+                                <rect key="frame" x="20" y="72" width="560" height="64"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Clt-uv-uhH" userLabel="POST Bar Stack View">
+                                        <rect key="frame" x="8" y="8" width="544" height="48"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Talk about your app" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XOj-cr-E9A" customClass="MaterialTextField" customModule="Digimark_Showcase" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="426" height="48"/>
+                                                <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="lS4-sc-vnv">
+                                                <rect key="frame" x="436" y="0.0" width="48" height="48"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="48" id="fhn-J0-Urx"/>
+                                                    <constraint firstAttribute="height" constant="48" id="tgE-ne-G3g"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="I9h-m5-jO1" appends="YES" id="vwx-dV-YOH"/>
+                                                </connections>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkd-UE-khW" customClass="MaterialButton" customModule="Digimark_Showcase" customModuleProvider="target">
+                                                <rect key="frame" x="494" y="0.0" width="50" height="48"/>
+                                                <color key="backgroundColor" red="0.0" green="0.70588235294117641" blue="0.88235294117647056" alpha="1" colorSpace="deviceRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="fxe-ea-cUD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
+                                                <state key="normal" title="POST">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="makePost:" destination="iNo-Ea-f5s" eventType="touchUpInside" id="8eW-Iy-dzJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="Clt-uv-uhH" secondAttribute="trailing" id="BFB-5A-DRe"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="Clt-uv-uhH" secondAttribute="bottom" id="KzE-Yd-RmK"/>
+                                    <constraint firstAttribute="height" constant="64" id="Vcf-kw-luN"/>
+                                    <constraint firstItem="Clt-uv-uhH" firstAttribute="top" secondItem="avG-eT-h4l" secondAttribute="topMargin" id="mNd-ld-CCJ"/>
+                                    <constraint firstItem="Clt-uv-uhH" firstAttribute="leading" secondItem="avG-eT-h4l" secondAttribute="leadingMargin" id="xMf-TN-uPU"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="347" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k9p-Bp-MRQ">
-                                <rect key="frame" x="20" y="64" width="560" height="536"/>
+                                <rect key="frame" x="20" y="144" width="560" height="456"/>
                                 <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostCell" id="8GG-1r-WDn" customClass="PostCell" customModule="Digimark_Showcase" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="560" height="347"/>
+                                        <rect key="frame" x="0.0" y="28" width="560" height="347"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8GG-1r-WDn" id="XIa-Hr-3XE">
                                             <rect key="frame" x="0.0" y="0.0" width="560" height="347"/>
@@ -237,26 +288,26 @@
                                                                                 <constraint firstAttribute="width" constant="50" id="MBu-AX-iZ3"/>
                                                                             </constraints>
                                                                         </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="demonslayer31" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="XAZ-dh-WWa">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="demonslayer31" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="XAZ-dh-WWa">
                                                                             <rect key="frame" x="50" y="0.0" width="99" height="50"/>
                                                                             <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
                                                                             <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="heart-empty" translatesAutoresizingMaskIntoConstraints="NO" id="5GL-6k-SSY">
-                                                                            <rect key="frame" x="149" y="0.0" width="115" height="50"/>
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="heart-empty" translatesAutoresizingMaskIntoConstraints="NO" id="5GL-6k-SSY">
+                                                                            <rect key="frame" x="149" y="0.0" width="0.0" height="50"/>
                                                                         </imageView>
-                                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="i4G-mJ-2gl">
-                                                                            <rect key="frame" x="264" y="0.0" width="57" height="50"/>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="i4G-mJ-2gl">
+                                                                            <rect key="frame" x="149" y="0.0" width="171" height="50"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="1444" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3X-wu-m0m">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="57" height="24"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1444" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3X-wu-m0m">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="171" height="24"/>
                                                                                     <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
                                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Likes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a68-pg-Lpa">
-                                                                                    <rect key="frame" x="0.0" y="24" width="57" height="27"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Likes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a68-pg-Lpa">
+                                                                                    <rect key="frame" x="0.0" y="24" width="171" height="27"/>
                                                                                     <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                                                     <color key="textColor" red="0.72431205436720147" green="0.70785013719746626" blue="0.71525597611877256" alpha="1" colorSpace="calibratedRGB"/>
                                                                                     <nil key="highlightedColor"/>
@@ -302,6 +353,7 @@
                                         <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="descriptionText" destination="PxV-D0-lIC" id="e1s-Cw-ZXs"/>
+                                            <outlet property="likeImage" destination="5GL-6k-SSY" id="njn-QM-8Bf"/>
                                             <outlet property="likesLbl" destination="F3X-wu-m0m" id="XXp-pU-W2u"/>
                                             <outlet property="profileImg" destination="VvU-57-LfB" id="cNk-oz-fOF"/>
                                             <outlet property="showcaseImg" destination="8JS-CW-UsM" id="CB9-sO-mLw"/>
@@ -313,17 +365,33 @@
                         <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="k9p-Bp-MRQ" firstAttribute="trailing" secondItem="llG-SG-6FP" secondAttribute="trailingMargin" id="0FS-sG-PX9"/>
+                            <constraint firstItem="avG-eT-h4l" firstAttribute="leading" secondItem="llG-SG-6FP" secondAttribute="leadingMargin" id="0v4-Nh-MRF"/>
                             <constraint firstItem="XZ2-48-3te" firstAttribute="top" secondItem="k9p-Bp-MRQ" secondAttribute="bottom" id="8by-fE-hBD"/>
+                            <constraint firstItem="k9p-Bp-MRQ" firstAttribute="top" secondItem="avG-eT-h4l" secondAttribute="bottom" constant="8" id="Q66-Jw-TiS"/>
+                            <constraint firstItem="avG-eT-h4l" firstAttribute="trailing" secondItem="llG-SG-6FP" secondAttribute="trailingMargin" id="YP2-43-z7b"/>
                             <constraint firstItem="k9p-Bp-MRQ" firstAttribute="leading" secondItem="llG-SG-6FP" secondAttribute="leadingMargin" id="ozN-Ke-Oax"/>
+                            <constraint firstItem="avG-eT-h4l" firstAttribute="top" secondItem="Acd-0G-QUJ" secondAttribute="bottom" constant="8" id="u23-y3-axD"/>
                             <constraint firstItem="k9p-Bp-MRQ" firstAttribute="top" secondItem="Acd-0G-QUJ" secondAttribute="bottom" id="yk0-NH-CfQ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="yk0-NH-CfQ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="fFl-mD-rtG"/>
                     <connections>
+                        <outlet property="imageSelectorImage" destination="lS4-sc-vnv" id="VlD-v7-07q"/>
+                        <outlet property="postField" destination="XOj-cr-E9A" id="hbb-11-ff4"/>
                         <outlet property="tableView" destination="k9p-Bp-MRQ" id="M1G-nw-tWl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xVE-UG-MgW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="I9h-m5-jO1">
+                    <connections>
+                        <action selector="selectImage:" destination="iNo-Ea-f5s" id="vbh-dY-xIc"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1834" y="209"/>
         </scene>
@@ -348,6 +416,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera" width="50" height="50"/>
         <image name="digimark-icon-logo" width="156" height="206"/>
         <image name="fb-icon-new" width="65" height="65"/>
         <image name="heart-empty" width="150" height="147"/>
